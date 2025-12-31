@@ -2,40 +2,40 @@
 
 ![image alt](https://github.com/iammigjoe/SmokingRiskDashboard-With-PowerBI/blob/main/Dashboard.png?raw=true)
 
-🇬🇧 README — Smoking Health Risk Analysis Dashboard (Power BI)
+Smoking Health Risk Analysis Dashboard (Power BI)
 
-📌 Project Overview
+Project Overview
 
 The Smoking Health Risk Analysis Dashboard is an interactive Power BI report designed to analyze the health impact of smoking behaviors across different demographic groups.
 
-The project focuses on transforming raw health data into clear, actionable insights related to smoking status, age, BMI, cholesterol, hypertension, and organ health risks.
-It is built with a business & healthcare analytics mindset, suitable for data analyst or business analyst portfolios.
+This project focuses on transforming raw health data into clear, actionable insights related to smoking status, age, BMI, cholesterol, hypertension, and organ health risks.
+It is built with a business and healthcare analytics mindset, making it suitable for Data Analyst and Business Analyst portfolios.
 
 ⸻
 
-🎯 Objectives
+Objectives
 	•	Analyze smoking behavior (Never / Current / Former)
-	•	Compare age and BMI vs overall averages
+	•	Compare age and BMI against overall averages
 	•	Identify health risk patterns across age groups
-	•	Visualize the relationship between smoking duration, daily intake, and health outcomes
-	•	Provide an intuitive and visually engaging dashboard for decision-making
+	•	Explore relationships between smoking duration, daily intake, and health outcomes
+	•	Deliver an intuitive and decision-oriented dashboard
 
 ⸻
 
-📊 Key KPIs & Metrics
-	•	Total Patients
-	•	Average Age vs Global Average
-	•	Average BMI vs Global Average
-	•	Smoking Status Distribution
-	•	Smoking Duration & Daily Intake
-	•	Cholesterol & Hypertension Rates
-	•	Organ Condition (Healthy vs Damaged)
+Key KPIs & Metrics
+	•	Total number of patients
+	•	Average age vs global average
+	•	Average BMI vs global average
+	•	Smoking status distribution
+	•	Smoking duration and daily intake
+	•	Cholesterol and hypertension rates
+	•	Organ condition (Healthy vs Damaged)
 
 ⸻
 
-🧮 DAX Measures Used
+DAX Measures Used
 
-vs Average Age
+Average Age vs Global Average
 
 vs Avg Age = 
 VAR _CurrentAge = AVERAGE(health_dataset[Age])
@@ -50,7 +50,7 @@ SWITCH(
     FORMAT(_CurrentAge, "0.0")
 )
 
-vs Average BMI
+Average BMI vs Global Average
 
 vs Avg BMI = 
 VAR _CurrentBMI = AVERAGE(health_dataset[BMI])
@@ -68,7 +68,7 @@ SWITCH(
 
 ⸻
 
-🏷 Calculated Column
+Calculated Column
 
 Age Group
 
@@ -86,23 +86,23 @@ SWITCH(
 
 ⸻
 
-🧠 Insights Provided
-	•	Current smokers tend to have higher BMI and health risk indicators
+Insights Generated
+	•	Current smokers show higher BMI and health risk indicators
 	•	Health deterioration increases with smoking duration
-	•	Older age groups show higher cholesterol and hypertension rates
-	•	Visual organ indicators help quickly identify damaged vs healthy conditions
+	•	Older age groups present higher cholesterol and hypertension rates
+	•	Visual indicators allow fast identification of damaged vs healthy organs
 
 ⸻
 
-🛠 Tools & Technologies
+Tools & Technologies
 	•	Power BI Desktop
-	•	DAX (Measures & Calculated Columns)
+	•	DAX (Measures and Calculated Columns)
 	•	Data Modeling
-	•	Interactive Visual Design
+	•	Interactive Dashboard Design
 
 ⸻
 
-📂 Dataset Structure
+Dataset Structure
 
 Main table: health_dataset
 
@@ -120,32 +120,36 @@ Key fields:
 
 ⸻
 
-🚀 Use Case
+Use Cases
 	•	Healthcare analytics
 	•	Public health awareness
 	•	Data analytics portfolio project
-	•	Business & medical decision support
+	•	Business and medical decision support
 
-🇫🇷 README — Dashboard d’Analyse des Risques Liés au Tabagisme (Power BI)
+⸻
 
-📌 Présentation du projet
+⸻
+
+Dashboard d’Analyse des Risques Liés au Tabagisme (Power BI)
+
+Présentation du projet
 
 Le Smoking Health Risk Analysis Dashboard est un tableau de bord interactif Power BI permettant d’analyser l’impact du tabagisme sur la santé selon différents profils démographiques.
 
-Ce projet vise à transformer des données de santé brutes en indicateurs clairs et exploitables, afin de mieux comprendre les risques liés au tabac : âge, IMC, cholestérol, hypertension et état des organes.
+L’objectif est de transformer des données de santé brutes en indicateurs clairs et exploitables afin de mieux comprendre les risques liés au tabac : âge, IMC, cholestérol, hypertension et état des organes.
 
 ⸻
 
-🎯 Objectifs
+Objectifs
 	•	Analyser les statuts de fumeur (Jamais / Actuel / Ancien)
 	•	Comparer l’âge et l’IMC à la moyenne globale
-	•	Identifier les facteurs de risque santé
+	•	Identifier les principaux facteurs de risque santé
 	•	Étudier l’impact de la durée et de l’intensité du tabagisme
-	•	Offrir une visualisation claire pour l’aide à la décision
+	•	Fournir une visualisation claire pour l’aide à la décision
 
 ⸻
 
-📊 Indicateurs clés
+Indicateurs clés
 	•	Nombre total de patients
 	•	Âge moyen vs moyenne globale
 	•	IMC moyen vs moyenne globale
@@ -156,51 +160,24 @@ Ce projet vise à transformer des données de santé brutes en indicateurs clair
 
 ⸻
 
-🧮 Mesures DAX
-
-(Identiques à la version anglaise — voir section précédente)
-
-⸻
-
-🏷 Colonne calculée
-
-Groupe d’âge
-
-Age Group = 
-SWITCH(
-    TRUE(),
-    health_dataset[Age] <= 28, "18–28",
-    health_dataset[Age] <= 38, "29–38",
-    health_dataset[Age] <= 48, "39–48",
-    health_dataset[Age] <= 58, "49–58",
-    health_dataset[Age] <= 68, "59–68",
-    "69+"
-)
-
+Enseignements clés
+	•	Les fumeurs actifs présentent des risques santé plus élevés
+	•	Les indicateurs de santé se dégradent avec la durée du tabagisme
+	•	Les groupes d’âge élevés sont plus exposés aux pathologies
+	•	Les visuels facilitent une lecture rapide et orientée décision
 
 ⸻
 
-🧠 Enseignements clés
-	•	Les fumeurs actifs présentent davantage de risques santé
-	•	L’IMC et les pathologies augmentent avec la durée du tabagisme
-	•	Les groupes d’âge élevés montrent des risques accrus
-	•	Les visuels permettent une lecture rapide et intuitive
-
-⸻
-
-🛠 Outils utilisés
+Outils utilisés
 	•	Power BI Desktop
-	•	DAX (mesures & colonnes calculées)
+	•	DAX (mesures et colonnes calculées)
 	•	Modélisation de données
-	•	Design de dashboards interactifs
+	•	Conception de dashboards interactifs
 
 ⸻
 
-🚀 Cas d’usage
-	•	Analyse santé publique
+Cas d’usage
+	•	Analyse en santé publique
 	•	Sensibilisation aux risques du tabac
-	•	Projet portfolio Data / Business Analyst
-	•	Aide à la décision médicale
-
-⸻
-Projet Power BI – Analyse des risques santé
+	•	Projet portfolio Data Analyst / Business Analyst
+	•	Aide à la décision médicale et stratégique
